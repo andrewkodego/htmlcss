@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice Form</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main" class="page-wrapper">
+        <form action="#">
+            <fieldset>
+                <legend>Invoice Details</legend>
+            <div>
+                <label>Invoice To:</label>
+                <input type="text" name="invoice_to" maxlength="50" style="width:400px;"/>
+            </div>
+            <div>
+                <label>Contact #:</label>
+                <input type="text" name="contact_number" maxlength="14"/>
+                <label>Date:</label>
+                <input type="date" name="contact_date"/>
+                <label>Currency:</label>
+                <select name="currency">
+                    <option value="">-- Select Currency --</option>
+                    <option value="4">AUD</option>
+                    <option value="3">EUR</option>
+                    <option value="1">PHP</option>
+                    <option value="2">USD</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th style="width: 50%;">Item Description</th>
+                    <th style="width: 15%;">Qty</th>
+                    <th style="width: 15%;">Unit Price</th>
+                    <th style="width: 20%;">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><textarea name="desc_1" style="width:100%"></textarea></td>
+                    <td><input type="number" name="qty_1" min="1"/></td>
+                    <td>
+                        <input type="text" name="unit_price_1"/>
+                    </td>
+                    <td><input type="text" name="amount_1"/></td>
+                </tr>
+                <tr>
+                    <td><textarea name="desc_2" style="width:100%"></textarea></td>
+                    <td><input type="number" name="qty_2" min="1"/></td>
+                    <td><input type="text" name="unit_price_2"/></td>
+                    <td><input type="text" name="amount_2"/></td>
+                </tr>
+                <tr>
+                    <td><textarea name="desc_3" style="width:100%"></textarea></td>
+                    <td><input type="number" name="qty_3" min="1"/></td>
+                    <td><input type="text" name="unit_price_3"/></td>
+                    <td><input type="text" name="amount_3"/></td>
+                </tr>
+                <tr>
+                    <td><textarea name="desc_4" style="width:100%"></textarea></td>
+                    <td><input type="number" name="qty_4" min="1"/></td>
+                    <td><input type="text" name="unit_price_4"/></td>
+                    <td><input type="text" name="amount_4"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;">Sub Total</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;">VAT</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;">Total</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset>
+            <legend>Additional Details</legend>
+            <label>Payment Method</label>
+            <select name="payment_method">
+                <option value="">-- Select Payment Method --</option>
+                <option value="1">Cash on Delivery</option>
+                <option value="2">Credit Card</option>
+                <option value="3">GCash</option>
+                <option value="4">Paypal</option>
+            </select>
+            <div>
+                <input type="radio" id="do_home" name="delivery_option" value="home"/>
+                <label for="do_home">Home</label>
+                <input type="radio" id="do_office" name="delivery_option" value="Office"/>
+                <label for="do_office">Office</label>
+            </div>
+            <div>
+                <textarea name="delivery_address" cols="40" rows="4" placeholder="Delivery Address"></textarea>
+            </div>  
+        </fieldset>
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+</body>
+</html>
