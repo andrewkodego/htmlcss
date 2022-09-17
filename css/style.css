@@ -14,6 +14,9 @@ header {
     height: 50px;
     width: 100%;
     background-color: #aaa;
+    position: fixed;
+    left:0px;
+    top: 0px;
 }
 
 .banner{
@@ -45,6 +48,108 @@ section.about-me{
     font-size: 18px;
     line-height: 38px;
     text-align: justify;
+}
+
+section.my-portfolio div{
+    background-color: #999;
+    border: 1px solid #000;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-inline{
+    display: inline;
+    background-color: aqua;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-inline.d2{
+    width: 300px;
+    display: inline-block;
+    background-color: red;
+}
+
+.d-none, .d-inline {
+    font-size: 16px;
+}
+
+section .d-inline{
+    color: yellow;
+}
+
+section>.d-inline{
+    color: green;
+}
+
+section>div>.d-inline{
+    color: violet;
+}
+
+.with-direction{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.with-direction>div{
+    height: 40px;
+    text-align: center;
+}
+
+.d12{
+    order: 5;
+    flex-grow: 1;
+}
+
+.d13{
+    order: 1;
+    flex-grow: 1;
+}
+
+.d14{
+    order:2;
+    flex-grow: 2;
+}
+
+.d15{
+    order: 4;
+    flex-grow: 1;
+}
+
+.d16{
+    order: 3;
+    flex-grow: 3;
+}
+
+section.my-portfolio div.d-flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: none;
+    border: none;
+    padding: 15px;
+}
+
+.d-flex>.d-inline{
+    display: inline-block;
+    width: 180px;
+    padding: 15px;
+    margin: 15px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 5px 10px #ccc;
+    border-radius: 4px;
+}
+
+section.my-portfolio .d-flex h4{
+    min-height: 60px;
+}
+
+section.my-portfolio .d-flex p{
+    font-size: 14px;
 }
 
 
