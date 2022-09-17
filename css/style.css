@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-wrapper {
+    max-width: 1024px;
+    background-color: #ccc;
+    margin: 0px auto 30px auto;
+    padding: 0px 15px 15px 30px;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #aaa;
+}
+
+.banner{
+    height: 400px;
+    background-image: url('../images/DSC_0122.JPG');
+    background-size: cover;
+    background-position: bottom;
+}
+
+h1{
+    color:white;
+    text-align: center;
+    padding-top:60px;
+    font-size: 46px;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+
+section.about-me{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 38px;
+    text-align: justify;
+}
+
+
