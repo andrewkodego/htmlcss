@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div id="result"></div>
+</body>
+
+<script>
+var data = {
+   employees: [
+       {
+           name: "Oliver Queen",
+           title: "CEO",
+           gender: "male",
+           orgLevel: 13,
+           languages: ["english", "spanish"]
+       }, {
+           name: "Ben Hur",
+           title: "Security consultant",
+           gender: "male",
+           orgLevel: 5,
+           languages: ["latin", "italian"]
+       }, {
+           name: "Jessica Alba",
+           title: "Admin Assistant",
+           gender: "female",
+           orgLevel: 3,
+           languages: ["english", "spanish"]
+       }, {
+           name: "Pepper Piper",
+           title: "Quality Assurance",
+           gender: "female",
+           orgLevel: 5,
+           languages: ["english", "spanish"]
+       }, {
+           name: "Red Sullivan",
+           title: "Project Manager",
+           gender: "male",
+           orgLevel: 7,
+           languages: ["russian", "english"]
+       }
+   ]
+};
+
+function getEmployeeJobTitle(gender, lang){
+	var jobTitle = [];
+  for(let x in data.employees){
+    let employee = data.employees[x];
+	if(employee.gender == gender){
+    	for(let y in employee.languages){
+            let language = employee.languages[y];
+        	if(language == lang){
+            	jobTitle.push(employee.title);
+            }
+        }
+    }
+    
+ }
+ return jobTitle;
+}
+
+document.write(getEmployeeJobTitle('male','english'));
+
+</script>
+</html> 
