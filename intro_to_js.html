@@ -5,6 +5,8 @@
         <title>Intro To JavaScript</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+        
+
         <style>
             .container {
                 border: 1px solid #ccc;
@@ -27,17 +29,79 @@
 
         </style>
 
-        <script>
-            
+        <script type="text/javascript" src="js/kodego.js"></script>
 
+        <script>
+            document.write("<h2>Im a JavaScript output Start</h2>");
+            var uwu = document.write('uwu');
+            var x = 10; 
+            var x = 20;
+            var x = 30;
+
+            let y = 10;           
+            y = 20;
+            let z = 20;
+
+            let month = 'January';
+            let months = ["Jan","Feb","Mar","Apr","May"];
+
+            //day 1 .. 31
+            month = "February";
+
+            const pi = 3.1416;
+            const vat = 0.12;
+            const tax = 0.30;
+
+            const age = 40;
+
+            const warningMsg = "STOP";
+            const saturday = "Saturday";
+            
+            
+            document.write( 1 + 2 * 3 );
+            document.write( (1 + 2) * 3 );
+            document.write( (1 + 2) * 3 / 3);
+            document.write( 22 % 3 );
+            document.write( y++ );
+            document.write( y );
+            document.write( z-- );
+            document.write( z );
+
+            x += 1;
+            x -= 1;
+            x *= 2;
+
+            document.write("<br>");
+            document.write( x );
+            document.write("<br>");
+            document.write( x ** y);
+
+            var formula = "20 + (x + y) * 40 / z";
+
+            //document.write(x);
+           // console.log("test " + x);
+            //console.log("string " + y + z);
+            //getAreaOfCircle(10);
+
+            //document.write(getAreaOfCircle(10));
+            //console.log(getAreaOfCircle(5));
+
+            // alert('TEST without window');
         </script>
+
+        
     
     </head>
     <body id="main">
+
        <div class="container" id="main-container"></div>
        <div class="container" id="main-container1"></div>
        <div class="container" id="main-container2"></div>
        <div class="container" id="main-container3"></div>
+
+       <script>
+            document.write("Im a JavaScript output in the middle");
+        </script>
 
        <div class="container" id="main-container4">
             <button onclick="onClickSmall()">Small</button>
@@ -64,6 +128,12 @@
         document.getElementById("main-container2").innerHTML = "My name is Slim Shady";
         document.getElementById("main-container3").innerHTML = "<h1>I'm an H1 element</h1>";
         
+        function concatenateString(string1, string2){
+            let y = 50;
+            var x = 40;
+            document.write(string1 +" " + string2 + y + x);
+        }
+
         function onClick(){
             document.getElementById("main-container1").innerHTML = "Button has been clicked.";
             document.getElementById("main-container1").style.fontSize = "32px";
@@ -96,5 +166,14 @@
             document.getElementById("dynamic-input").setAttribute("name","input_date");
             document.getElementById("dynamic-input").setAttribute("maxlength","10");
         }
+
+        document.write("Im a JavaScript output.");
+            
+        concatenateString("Hello", "James");
+
+        console.log("string " + y + z + x);
+        console.log("string" + "10" + "20");
+
     </script>
+    
 </html>
