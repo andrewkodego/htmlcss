@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>JavaScript Conditions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>   
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/kodego.js"></script>
+
+    </head>
+    <body>
+
+        <h2>https://devdocs.io/javascript/</h2>
+
+        <h3>WHILE LOOP</h3>
+        
+        <div id="result"></div>
+        <p id="result1"></p>
+
+
+        <script>
+
+            incrementCounter(1, 10, document.getElementById("result"));
+            incrementCounter(0, 20, document.getElementById("result"));
+            incrementCounter(0, 100, document.getElementById("result1"), 5);
+
+            let names = ["James","Rowen","Jessie","Tims","Maki","Eunice","Mark"];
+            let counter = 0;
+            while(names[counter] != "Maki"){
+                counter++;
+            }
+            document.getElementById("result").innerHTML += "<br>";
+            document.getElementById("result").innerHTML += counter;
+
+            document.getElementById("result1").innerHTML += "<br>";
+            decrementCounter(100, 0, document.getElementById("result1"), 10);
+
+            let runStatment = false;
+            do{
+                console.log('test');
+                runStatment = false;
+            }while(runStatment);
+
+
+            document.getElementById("result1").innerHTML += "<br>";
+            counter = 1;
+            do{
+                document.getElementById("result1").innerHTML += counter;
+                counter++;
+            }while(counter <= 10);
+
+            names = ["James","Rowen","Jessie","Tims","Maki","Eunice","Mark"];
+            counter = 0;
+            while(counter < names.length){
+                console.log(names[counter]);
+                counter++;
+            }
+
+            let personalInfo = [
+                {
+                firstName:"Juan",
+                lastName:"Dela Cruz",
+                age: 24,
+                gender: "male",
+                jobTitle: "Manager",
+                },
+                {
+                firstName:"Anna",
+                lastName:"Salvador",
+                age: 21,
+                gender: "female",
+                jobTitle: "Junior Dev",
+                },
+                {
+                firstName:"Mark",
+                lastName:"Bautista",
+                age: 28,
+                gender: "male",
+                jobTitle: "Senior Fullstack Dev",
+                },
+                {
+                firstName:"Micheal",
+                lastName:"Garcia",
+                age: 31,
+                gender: "male",
+                jobTitle: "CEO",
+                },
+            ];
+
+            let genderCount = 0;
+            counter = 0;
+            while(counter < personalInfo.length){
+
+                if(personalInfo[counter].gender == "male"){
+                    genderCount++;
+                }
+
+                counter++;
+            }
+
+            console.log(genderCount);
+
+
+        </script>
+
+    </body>
+</html>

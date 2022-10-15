@@ -49,6 +49,36 @@ function getCalendarMonthDays(monthName){
     }
 }
 
+function incrementCounter(counter, maxvalue, targetDisplay, increment=1){
+    if(targetDisplay == null){
+        targetDisplay = document.body;
+    }
+    let addComma = false;
+    while(counter <= maxvalue){
+        if(addComma){
+            targetDisplay.innerHTML += ", ";
+        }
+        targetDisplay.innerHTML += counter;
+        addComma = true;
+        counter += increment;
+    }
+}
+
+function decrementCounter(counter, minvalue, targetDisplay, decrement=1){
+    if(targetDisplay == null){
+        targetDisplay = document.body;
+    }
+    let addComma = false;
+    while(counter >= minvalue){
+        if(addComma){
+            targetDisplay.innerHTML += ", ";
+        }
+        targetDisplay.innerHTML += counter;
+        addComma = true;
+        counter -= decrement;
+    }
+}
+
 
 
 
