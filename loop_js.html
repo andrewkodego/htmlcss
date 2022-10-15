@@ -92,17 +92,52 @@
             let femaleCount = getStaffCount('gender', 'female');
             let ceoCount = getStaffCount('title', 'CEO');
 
+            console.log(femaleCount);
+            console.log(ceoCount);
             console.log("age equal to 25: " + getStaffCount('age', 25));
             console.log("age less than 30: " + getStaffCount('age', 30, "<"));
             console.log("age greater than 30: " + getStaffCount('age', 30, ">"));
             console.log("age greater than equal 27: " + getStaffCount('age', 27, ">="));
             console.log("age less than equal 27: " + getStaffCount('age', 27, "<="));
-            console.log(femaleCount);
-            console.log(ceoCount);
             console.log(getStaffCount('language', 'spanish'));
             console.log(getStaffCount('language', 'english'));
             console.log(getStaffCount('language', 'french'));
             console.log(getStaffCount('language', 'russian'));
+
+            console.log("FOR age equal to 25: " + getStaffCountFor('age', 25));
+            console.log("FOR age less than 30: " + getStaffCountFor('age', 30, "<"));
+            console.log("FOR age greater than 30: " + getStaffCountFor('age', 30, ">"));
+            console.log("FOR age greater than equal 27: " + getStaffCountFor('age', 27, ">="));
+            console.log("FOR age less than equal 27: " + getStaffCountFor('age', 27, "<="));
+            console.log(getStaffCountFor('language', 'spanish'));
+            console.log(getStaffCountFor('language', 'english'));
+            console.log(getStaffCountFor('language', 'french'));
+            console.log(getStaffCountFor('language', 'russian'));
+
+            let dataCount = 0;
+            for(let i=0; i < staff.length; i++){
+                if(staff[i].age > 24){
+                    dataCount++;
+                }
+            }
+
+            for(let i=0; i <= 10; i++){
+                console.log("counting >> " + i);
+            }
+
+            let i=0;
+            while(i <=10){
+                console.log("while count >>" + i);
+                i++;
+            }
+
+            console.log(dataCount);
+
+            document.getElementById("result1").innerHTML += "<br>";
+            incrementCountFor(0, 100, document.getElementById("result1"), 5);
+
+
+            
 
         </script>
 

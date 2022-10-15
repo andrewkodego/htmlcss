@@ -79,6 +79,20 @@ function decrementCounter(counter, minvalue, targetDisplay, decrement=1){
     }
 }
 
+function incrementCountFor(counter, maxvalue, targetDisplay, increment=1){
+    if(targetDisplay == null){
+        targetDisplay = document.body;
+    }
+    let addComma = false;
+    for(counter; counter <= maxvalue; counter+=increment){
+        if(addComma){
+            targetDisplay.innerHTML += ", ";
+        }
+        targetDisplay.innerHTML += counter;
+        addComma = true;
+    }
+}
+
 function getStaffCount(key, value, operator="="){
     let dataCount = 0;
     let i = 0;
@@ -117,7 +131,45 @@ function getStaffCount(key, value, operator="="){
     return dataCount;
 }
 
-
+function getStaffCountFor(key, value, operator="="){
+    let dataCount = 0;
+    //let i = 0;
+    //while(i < staff.length){
+    for(let i = 0; i < staff.length; i++){
+        switch(key){
+            case  "age":
+                if(operator == ">" && staff[i][key] > value){
+                    dataCount++;
+                }else if(operator == "<" && staff[i][key] < value){
+                    dataCount++;
+                }else if(operator == ">=" && staff[i][key] >= value){
+                    dataCount++;
+                }else if(operator == "<=" && staff[i][key] <= value){
+                    dataCount++;
+                }else if(staff[i][key] == value){
+                    dataCount++;
+                }
+                break;
+            case "language":
+                //let j = 0;
+                //while(j < staff[i].languages.length){
+                for(let j = 0; j < staff[i].languages.length; j++){
+                    if(staff[i].languages[j] == value){
+                        dataCount++;
+                    }
+                    //j++;
+                }
+                break;
+            default:
+                if(staff[i][key] == value){
+                    dataCount++;
+                }
+                break;
+        }
+        //i++;
+    }
+    return dataCount;
+}
 
 
 
