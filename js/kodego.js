@@ -79,6 +79,43 @@ function decrementCounter(counter, minvalue, targetDisplay, decrement=1){
     }
 }
 
+function getStaffCount(key, value, operator="="){
+    let dataCount = 0;
+    let i = 0;
+    while(i < staff.length){
+        switch(key){
+            case  "age":
+                if(operator == ">" && staff[i][key] > value){
+                    dataCount++;
+                }else if(operator == "<" && staff[i][key] < value){
+                    dataCount++;
+                }else if(operator == ">=" && staff[i][key] >= value){
+                    dataCount++;
+                }else if(operator == "<=" && staff[i][key] <= value){
+                    dataCount++;
+                }else if(staff[i][key] == value){
+                    dataCount++;
+                }
+                break;
+            case "language":
+                let j = 0;
+                while(j < staff[i].languages.length){
+                    if(staff[i].languages[j] == value){
+                        dataCount++;
+                    }
+                    j++;
+                }
+                break;
+            default:
+                if(staff[i][key] == value){
+                    dataCount++;
+                }
+                break;
+        }
+        i++;
+    }
+    return dataCount;
+}
 
 
 

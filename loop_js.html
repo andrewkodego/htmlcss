@@ -59,34 +59,10 @@
             }
 
             let personalInfo = [
-                {
-                firstName:"Juan",
-                lastName:"Dela Cruz",
-                age: 24,
-                gender: "male",
-                jobTitle: "Manager",
-                },
-                {
-                firstName:"Anna",
-                lastName:"Salvador",
-                age: 21,
-                gender: "female",
-                jobTitle: "Junior Dev",
-                },
-                {
-                firstName:"Mark",
-                lastName:"Bautista",
-                age: 28,
-                gender: "male",
-                jobTitle: "Senior Fullstack Dev",
-                },
-                {
-                firstName:"Micheal",
-                lastName:"Garcia",
-                age: 31,
-                gender: "male",
-                jobTitle: "CEO",
-                },
+                {firstName:"Juan", lastName:"Dela Cruz", age: 24,gender: "male", jobTitle: "Manager"},
+                {firstName:"Anna", lastName:"Salvador", age: 21, gender: "female", jobTitle: "Junior Dev"},
+                {firstName:"Mark", lastName:"Bautista", age: 28, gender: "male", jobTitle: "Senior Fullstack Dev"},
+                {firstName:"Micheal", lastName:"Garcia", age: 31, gender: "male", jobTitle: "CEO"},
             ];
 
             let genderCount = 0;
@@ -102,6 +78,31 @@
 
             console.log(genderCount);
 
+            let staff = [{name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"]}, 
+                {name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"]}, 
+                {name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"]}, 
+                {name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"]},
+                {name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"]},
+                {name:"Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"]},
+                {name:"Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"]},
+                {name:"Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"]},
+                {name:"Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"]}];
+            
+
+            let femaleCount = getStaffCount('gender', 'female');
+            let ceoCount = getStaffCount('title', 'CEO');
+
+            console.log("age equal to 25: " + getStaffCount('age', 25));
+            console.log("age less than 30: " + getStaffCount('age', 30, "<"));
+            console.log("age greater than 30: " + getStaffCount('age', 30, ">"));
+            console.log("age greater than equal 27: " + getStaffCount('age', 27, ">="));
+            console.log("age less than equal 27: " + getStaffCount('age', 27, "<="));
+            console.log(femaleCount);
+            console.log(ceoCount);
+            console.log(getStaffCount('language', 'spanish'));
+            console.log(getStaffCount('language', 'english'));
+            console.log(getStaffCount('language', 'french'));
+            console.log(getStaffCount('language', 'russian'));
 
         </script>
 
