@@ -20,7 +20,7 @@
         <p id="result1"></p>
 
         <h3>Fibonacci Sequence</h3>
-        <p id="result2"></p>
+        <div id="result2"></div>
 
         <script>
 
@@ -170,10 +170,73 @@
            
             document.getElementById("result2").innerHTML = doFibonacciSequence(6);
             document.getElementById("result2").innerHTML += "<br/>";
-            document.getElementById("result2").innerHTML += doFibonacciSequence(1);
+            document.getElementById("result2").innerHTML += doFibonacciSequence(10);
+
+            
+            let selectElem = "<div><select>";
+            let createSelect = (value, index, array) => {
+                selectElem += "<option id='"+index+"'>"+ value.name +"</option>";    
+            }
+
+            staff.forEach(createSelect);
+            document.getElementById("result2").innerHTML += selectElem + "</select></div>";
 
 
+            let listElem = "<div><ul>";
+            staff.forEach(function(value, index, array){
+                listElem += "<li>"+ value.name +"</li>";    
+            });
+            document.getElementById("result2").innerHTML += listElem + "</ul></div>";
 
+            let tableElem = "<div><table class='table'>";
+                tableElem += "<tr>";    
+                tableElem += "<th>Name</th>";    
+                tableElem += "<th>Age</th>";    
+                tableElem += "<th>Title</th>";    
+                tableElem += "</tr>"; 
+            staff.forEach(function(value, index, array){
+                tableElem += "<tr>";    
+                tableElem += "<td>"+ value.name +"</td>";    
+                tableElem += "<td>"+ value.age +"</td>";    
+                tableElem += "<td>"+ value.title +"</td>";    
+                tableElem += "</tr>";    
+            });
+
+            document.getElementById("result2").innerHTML += tableElem + "</table></div>";
+
+            //find on staff list the oldest and youngest 
+            let setOfNumber = [23,34,56,34,5,8,11,43];
+            //get the lowest number and highest number
+
+            let highest = 0, lowest= 0;
+            setOfNumber.forEach(function(value, index){
+                if(index == 0){
+                    highest = value, 
+                    lowest= value;
+                }
+
+                if(highest < value){
+                    highest = value;
+                }
+
+                if(lowest > value){
+                    lowest = value;
+                }
+            });
+
+            document.getElementById("result2").innerHTML += "<br/> "+ highest +" is the highest";
+            document.getElementById("result2").innerHTML += "<br/> "+ lowest +" is the lowest";
+
+            setOfNumber = setOfNumber.sort(function(first, second){
+                return first-second;
+            });
+            document.getElementById("result2").innerHTML += "<br/> "+ setOfNumber[0] + " is the lowest number";
+
+            setOfNumber = setOfNumber.sort(function(a, b){
+                return b-a;
+            });
+
+            document.getElementById("result2").innerHTML += setOfNumber[0] + " is the highest number";
 
 
         </script>
