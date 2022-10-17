@@ -172,4 +172,25 @@ function getStaffCountFor(key, value, operator="="){
 }
 
 
+//0,1,1,2,3,5,8,13,21,34,..
+function doFibonacciSequence(limit){
+
+    let numbers = [0,1];
+    let newValue = 0;
+    let n1 = 0;
+    let n2 = 1;
+
+    if(limit <= 1){
+        number = numbers.pop();
+    }
+
+    for(let i=0; i < limit-2; i++){
+        newValue = n1 + n2;
+        n1 = n2;
+        n2 = newValue;
+        numbers.push(newValue);
+    }
+
+    return numbers;
+}
 

@@ -19,6 +19,8 @@
         <div id="result"></div>
         <p id="result1"></p>
 
+        <h3>Fibonacci Sequence</h3>
+        <p id="result2"></p>
 
         <script>
 
@@ -164,6 +166,15 @@
             console.log(countConsecutiveValue(numbers));
             console.log(countConsecutiveValue(numbers, 3));
             console.log("4 consecutive" + countConsecutiveValue(numbers, 4));
+
+           
+            document.getElementById("result2").innerHTML = doFibonacciSequence(6);
+            document.getElementById("result2").innerHTML += "<br/>";
+            document.getElementById("result2").innerHTML += doFibonacciSequence(1);
+
+
+
+
 
         </script>
 
