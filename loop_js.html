@@ -239,6 +239,21 @@
             document.getElementById("result2").innerHTML += setOfNumber[0] + " is the highest number";
 
 
+            function getNextDivisibleNumber(number){
+                for(let i = number; i <= number + 7; i++){
+                    if(i % 7 == 0){
+                        return i;
+                    }
+                }
+
+                for(number; number <= number + 7; number++){
+                    if(number % 7 == 0){
+                        return number;
+                    }
+                }
+            }
+
+
         </script>
 
     </body>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <html>
+    <head>
+        <title>JavaScript Conditions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>   
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/kodego.js"></script>
+
+    </head>
+    <body>
+
+        <h2>String Methods</h2>
+
+        <script>
+            let str = "Hello World";
+            console.log(str.length);
+
+            //slice(start, end)
+            console.log(str.slice(6, 11));
+            console.log("example 2: "+ str.slice(-9, -4));
+            console.log("example 3: "+ str.slice(0, -4) + "...");
+            console.log("example 4: "+ str.slice(0, 5) + " UWU");
+
+
+            //substring(start, end)
+            console.log(str.substring(-7, 5));
+            console.log(str.substring(4));
+
+
+            //substr(start, length)
+            console.log(str.substr(6, 2));
+
+            let paragraph = "Create a function that accepts a NUMBER and output the next number in sequence that is divisible by 7."
+            // replace()
+            let newParagraph = paragraph.replace("function","method")
+            console.log(newParagraph);
+            console.log(newParagraph.replace("accepts","input"));
+
+            console.log(paragraph.replace(/number/g,"#"));
+            console.log(newParagraph.replace(/number/i,"#"));
+            console.log(newParagraph.replace(/number/gi,"#"));
+            
+            // toUpplerCase and toLowerCase
+            console.log(paragraph.toLocaleUpperCase());
+            console.log(paragraph.toLocaleLowerCase());
+
+            // concat (str1, str2, strn...)
+            console.log("Hello".concat(" ","WORLD!"));
+            let conStr = "";
+            console.log(conStr.concat("Andrew"," R."," Falsado", paragraph));
+
+            // trim()
+            let strCode = "   TEST VALUE  ";
+            console.log(strCode.trim());
+            console.log(strCode.trimStart());
+            console.log(strCode.trimEnd());
+
+            // 001
+            // 002
+            // 100
+            // padStart(length, char) padEnd(length, char)
+            console.log("1".padStart(6,"0"));
+            console.log("20".padStart(6,"0"));
+            let strNumber = "100";
+            console.log(strNumber.padStart(6,"x"));
+            console.log(strNumber.padEnd(6,"*"));
+
+            // charAt(position), charCodeAt(position)
+            let chartStr = "Create a function, that";
+            console.log(chartStr.charAt(7));
+            console.log(chartStr.charAt(9));
+            console.log(chartStr.charCodeAt(7));
+            console.log(chartStr[0]);
+
+            //split(separator)
+            let words = chartStr.split(" ");
+            console.log(chartStr.split(":"));
+            console.log(chartStr.split(","));
+            console.log(words);
+            
+            //indexOf(keyword, starting point)
+            paragraph = "Create a function that accepts a NUMBER and output the next number in sequence that is divisible by 7."
+            console.log(paragraph.indexOf("7"));
+            console.log(paragraph.indexOf("NUMBER"));
+            console.log(paragraph.indexOf("accepts", 33));
+            console.log(paragraph.lastIndexOf("accepts", 33));
+
+            // search(keyword)
+            console.log(paragraph.search("7"));
+            console.log(paragraph.search("accepts"));
+            
+            // match()
+            console.log(paragraph.match(/that/g));
+            console.log(paragraph.match(/th/g));
+            console.log(paragraph.match(/number/gi));
+
+            let strArr = paragraph.match(/that/g);
+            console.log(strArr);
+            let index = 0;
+            strArr.forEach(function(word){
+                index = paragraph.indexOf(word, index);
+                console.log(index);
+                index += word.length;
+            });
+
+            // includes(keyword, start_position)
+            console.log(paragraph.includes("visible"));
+            console.log(paragraph.includes("seq"));
+            console.log(paragraph.includes("numeric"));
+            console.log(paragraph.includes("8"));
+            console.log(paragraph.includes("Create", 20));
+            
+            // startWith(keyword), endsWith(keword)
+            console.log(paragraph.startsWith("Create"));
+            console.log(paragraph.startsWith("that"));
+            console.log(paragraph.startsWith("create"));
+
+            console.log(paragraph.endsWith("7."));
+            console.log(paragraph.endsWith("."));
+            console.log(paragraph.endsWith("7"));
+            console.log(paragraph.endsWith("divisible by 7."));
+
+
+        </script>
+    </body>
+</html>
