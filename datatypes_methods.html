@@ -123,7 +123,135 @@
             console.log(paragraph.endsWith("7"));
             console.log(paragraph.endsWith("divisible by 7."));
 
+        </script>
+
+
+        <h2>Number Methods</h2>
+
+        <script>
+            let number1 = 123.45;
+
+            // number toString()
+            console.log("Php " + number1.toString());
+            console.log("" + number1);
+
+            // toExponential(digit)
+            console.log(number1.toExponential(2));            
+            console.log(number1.toExponential(5));            
+
+            let number999 = 87878878787878783453453453453453532414867867;
+            console.log(number999.toExponential(5)); 
+            
+            // toFixed()
+            console.log(number1.toFixed(1)); 
+            console.log(number1.toFixed(0)); 
+            console.log(number1.toFixed(5)); 
+            
+            // toPrecision()
+            console.log(number1.toPrecision()); 
+            console.log(number1.toPrecision(2)); 
+            
+            let number3 = 1678.2345;
+            console.log(number3.toPrecision(1)); 
+            console.log(number3.toPrecision(2)); 
+            console.log(number3.toPrecision(4));
+            console.log(number3.toPrecision(5));
+            console.log(number3.toPrecision(7));
+
+            // valueOf()
+            console.log(number3.valueOf());
+
+            // parseInt()
+            console.log(parseInt(number3));
+            console.log(parseInt(number3 + " string"));
+            console.log(parseInt(" " + number3));
+            console.log(parseInt("." + number3));
+            console.log(parseInt("1234.67 890239"));
+
+            // parseFloat()
+            console.log(parseFloat(number3));
+            console.log(parseFloat(9999.99));
+            console.log(parseFloat(number3 + " "));
+            console.log(parseFloat("." + number3));
+            console.log(parseFloat(".1678.2345"));
+
+            // (baseSalary * 12) / 261 = perDay / 8 = perHour
+            let perDay = (25000 * 12)/261;
+            console.log(perDay.toFixed(2));
+            console.log((perDay / 8 ).toFixed(2));
 
         </script>
+
+        <h2>Array Methods</h2>
+        <div id="array_display"></div>
+        <script>
+            let names = ["James","Rowen","Jessie","Tims","Maki","Eunice","Mark"];
+            console.log(names);
+            console.log(names.toString());
+            document.getElementById("array_display").innerHTML = names;
+            document.getElementById("array_display").innerHTML += "<br/>";
+            document.getElementById("array_display").innerHTML += names.toString();
+
+            document.getElementById("array_display").innerHTML += "<span class=\"fa fa-star\">*</span>";
+            document.getElementById("array_display").innerHTML += "<br/>";
+            document.getElementById("array_display").innerHTML += names.join(" x ");
+            document.getElementById("array_display").innerHTML += names.join("*");
+            document.getElementById("array_display").innerHTML += "<br/>";
+            document.getElementById("array_display").innerHTML += names.join(" & ");
+            
+            // pop(), push()
+            document.getElementById("array_display").innerHTML += "<br/>";
+            document.getElementById("array_display").innerHTML += names.pop() + "<br/>";
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            document.getElementById("array_display").innerHTML += names.pop() + "<br/>";
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            let popName = names.pop();
+            document.getElementById("array_display").innerHTML += popName;
+
+            document.getElementById("array_display").innerHTML += "<br/>";
+            document.getElementById("array_display").innerHTML += names.push("Rechel") + "<br/>";
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            names.push("Sheryl");
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+
+            //shift(), unshift()
+            names.shift();
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            names.shift();
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            names.unshift("Carmen");
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            names.unshift("Dave");
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+
+            names[0] = "DaveTwo";
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+            names[3] = "Fecel";
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+
+            let names2 = ["James","Rowen","Jessie","Tims","Maki","Eunice","Mark"];
+
+            names = names.concat(names2, names);
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+
+            //splice(), slice()
+            names2.splice(2, 0, "Dave","Nino");
+            document.getElementById("array_display").innerHTML += names2 + "<br/>";
+            names2.splice(2, 3);
+            document.getElementById("array_display").innerHTML += names2 + "<br/>";
+
+            names = names.slice(2, 6);
+            document.getElementById("array_display").innerHTML += names + "<br/>";
+
+            // sort(), reverse()
+            names2 = names2.sort();
+            document.getElementById("array_display").innerHTML += names2 + "<br/>";
+            names2 = names2.reverse();
+            document.getElementById("array_display").innerHTML += names2.join(", ") + "<br/>";
+            document.getElementById("array_display").innerHTML += names2.join("<br>") + "<br/>";
+
+
+        </script>
+
     </body>
 </html>
